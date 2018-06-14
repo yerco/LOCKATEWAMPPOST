@@ -1,0 +1,7 @@
+{
+    "require": {
+        "voryx/wamppost": "^0.2.1",
+        "thruway/pawl-transport": "^0.5.0",
+        "monolog/monolog": "1.23.0"
+    }
+}
