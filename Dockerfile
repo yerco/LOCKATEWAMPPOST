@@ -11,8 +11,8 @@ RUN set -xe && \
     chown -R appuser:appuser /var/www/html/wamppost
 
 # zmq extension for php
-RUN apt-get update && apt-get install -y zlib1g-dev libzmq-dev wget git lsof vim
-#\
+RUN apt-get update && apt-get install -y wget git lsof vim
+#\ zlib1g-dev libzmq-dev \
 #    && pecl install zmq-beta \
 #    && docker-php-ext-install zip \
 #    && docker-php-ext-install pdo pdo_mysql
@@ -39,9 +39,14 @@ COPY --chown=appuser:appuser . /var/www/html/wamppost/
 USER appuser
 
 WORKDIR /var/www/html/wamppost
+ADD macphp.ini /usr/local/etc/php/php.ini
 
-# symfony
+# wamppost
 RUN ./composer.phar install
 RUN ./composer.phar dump-autoload
 
+EXPOSE 5051
+EXPOSE 8051
+
 CMD ["php", "WampPostClient/WampPostClient.php"]
+

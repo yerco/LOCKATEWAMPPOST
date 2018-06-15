@@ -21,10 +21,12 @@ use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
 //define("WAMPPOST_CLIENT_IP", "192.168.178.157");
-define("WAMPPOST_CLIENT_IP", "127.0.0.1");
+//define("WAMPPOST_CLIENT_IP", "127.0.0.1");
+define("WAMPPOST_CLIENT_IP", "0.0.0.0");
 define("WAMPPOST_CLIENT_PORT", "5051");
 //define("ROUTER_IP", "192.168.178.157");
-define("ROUTER_IP", "127.0.0.1");
+//define("ROUTER_IP", "127.0.0.1");
+define("ROUTER_IP", "0.0.0.0");
 define("ROUTER_PORT", "8051");
 
 // create a log channel
