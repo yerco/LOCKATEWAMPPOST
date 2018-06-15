@@ -8,7 +8,9 @@ describe('websocket', function() {
         /**
          *  Tests requires websocket router working
          */
-        var url = "192.168.178.157";
+        //var url = "192.168.178.157";
+        //var url = "172.17.0.2";
+        var url = "127.0.0.1";
         var port = "8051";
         var realm = "nubelum.lockate";
 
@@ -47,7 +49,7 @@ describe('websocket', function() {
             //      in the options.
             var publisher = {
                 topic: 'lockate.gateways',
-                args: ['The new order Maya-Gandul'],
+                args: ['The new order Maya-Gandulu'],
                 kwargs: {},
                 options: {exclude_me: false}
             };
